@@ -1,0 +1,48 @@
+<div class="ui menu header">
+  <div class="ui container">
+    <div class="item">
+      <a [routerLink]="['/welcome']" aria-label="Welcome">
+
+            <img style="height:50px" src="../assets/img/delonix.png">
+
+      </a>
+    </div>
+
+
+    <!-- NgIf the user is logged in -->
+    <div class="item" *ngIf="auth.isManage() && auth.isLoggedIn() || auth.isAdmin() && auth.isLoggedIn()">
+      <button [routerLink]="['/staff-list']" class="ui basic black button">
+        <b>Staff</b>
+      </button>
+    </div>
+
+    <!-- NgIf the user is logged in -->
+    <div class="item" *ngIf="auth.isLoggedIn()">
+      <button [routerLink]="['/booking']" class="ui basic black button">
+        <b>Booking</b>
+      </button>
+    </div>
+
+    <!-- NgIf the user is logged in -->
+    <div class="item" *ngIf="auth.isLoggedIn()">
+      <button [routerLink]="['/reports']" class="ui basic black button">
+        <b>Report</b>
+      </button>
+    </div>
+
+
+    <!-- NgIf the user is logged out -->
+    <div class="item" *ngIf="auth.isAdmin() && auth.isLoggedIn()">
+      <button [routerLink]="['/register']" class="ui basic button">
+        <i class="add user icon blue button right floated" aria-hidden="true"></i>
+        Register
+      </button>
+    </div>
+
+
+    <!-- NgIf the user is logged in -->
+    <div class="right item" *ngIf="auth.isLoggedIn()">
+      <button class="ui primary button logout" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>

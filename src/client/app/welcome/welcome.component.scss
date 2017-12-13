@@ -1,0 +1,73 @@
+/*for image*/
+#imageView{
+	background-image: url(http://www.pnsales.net/images/property/hotels.jpg);
+	background-size: cover;
+	min-height: 405px;
+}
+
+#tagline{
+	font-family: "Barlow";
+	font-size: 50px;
+	text-align: center;
+	color: #ffffcc;
+	padding-top: 200px;
+}
+
+#button{
+	width: 250px;
+	height: 55px;
+	color: #000;
+	font-family: "Barlow";
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 60px;
+	margin: 0 auto;
+	background-color: #ffffcc;
+}
+
+#button:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #fad771;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+/*for enquiry form*/
+enquiry{
+	text-align: center;
+}
+.enquiry h1{
+	padding: 0;
+	margin: 30px 0 0 0;
+	text-align: center;
+}
+
+.info{
+	width: 300px;
+	margin: 0 auto;
+	padding-top: 80px;
+	text-align: center;
+}
+
+form{
+	font-family: "Barlow";
+	font-size: 15px;
+}
+
+#submit{
+	width: 70px;
+	height: 30px;
+	background-color: #fad771;
+	font-family: "Barlow";
+	padding: 4px 12px;
+	margin: 10px 0 0 228px;
+}
+
+#submit:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #fad771;
+}

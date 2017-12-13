@@ -1,0 +1,43 @@
+<div class="edit-form-container">
+  <!-- Bottom will only shown if there is a report -->
+  <div class="ui icon message" *ngIf="editReport">
+    <i class="notched check green icon"></i>
+    <!-- When the notification icon is closed, newReports will be null to clear it -->
+    <i class="close icon" (click)="editReport = null"></i>
+    <div class="content">
+      <div class="header">
+        Report updated!
+      </div>
+      <p>Name: {{editReport.title}}</p>
+    </div>
+  </div>
+
+
+
+  <form class="ui big form" #reportForm="ngForm" (ngSubmit)="updateReport(report._id)" [class.loading]="loading">
+    <div class="fields">
+      <div class="eight wide field">
+        <label>Title</label>
+        <input type="text" placeholder="PC Title" name="title" [(ngModel)]="report.title">
+      </div>
+    </div>
+
+
+
+    <div class="equal width fields">
+      <div class="field">
+        <label>Description</label>
+        <textarea name="description" rows="10" cols="30" [(ngModel)]="report.description"></textarea>
+      </div>
+    </div>
+
+
+
+    <div class="field">
+      <label>Photo URL</label>
+      <input type="text" placeholder="/profile/example.jpg" name="photo" [(ngModel)]="report.photoUrl">
+    </div>
+
+    <button type="submit" class="ui submit large grey button right floated">Submit</button>
+  </form>
+</div>

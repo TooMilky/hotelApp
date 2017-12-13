@@ -1,0 +1,36 @@
+<br>
+
+<div style="text-align:center">
+    <input class="submit" id="btnRefresh" (click)="refreshData()" type="button" value="SHOW BOOKINGS" />
+    <input class="submit" id="btnClear" (click)="clearAll()" type="button" value="DELETE BOOKINGS" />
+</div>
+
+<div style="text-align:center">
+
+    <br />
+    <span style="background-color:red; padding:3px; color:black">RED: OCCUPIED ROOM</span>
+    <span style="background-color:yellow; padding:3px; color:black">YELLOW: UNAVAILABLE</span>
+    <br>
+
+    <h1>THIS WEEK'S BOOKINGS</h1>
+
+</div>
+
+
+
+
+
+
+
+<table id="tblTimetable">
+    <tr>
+        <th></th>
+        <th *ngFor="let day of days">{{day}}</th>
+    </tr>
+    <tr *ngFor="let time of times">
+        <td><span *ngIf="time>0">{{time}}</span></td>
+        <td id="{{'td'+day+time}}" *ngFor="let day of days"></td>
+    </tr>
+</table>
+
+
